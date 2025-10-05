@@ -83,11 +83,7 @@ Cảm ơn mọi người đã tham gia và chia sẻ kỷ niệm của mình tro
         >
           {content}
         </Markdown>
-        <img
-          className="max-w-[400px] w-full m-auto"
-          src="/images/common/lu_quang_minh.jpg"
-          alt=""
-        />
+        <img className="max-w-[400px] w-full m-auto" src="/images/common/lu_quang_minh.jpg" alt="" />
         <div className="text-center my-4">
           <p>Ông Lữ Quang Minh</p>
           <p>Chủ tịch Hội chữ thập đỏ, Thị trấn Cờ Đỏ, Thành phố Cần Thơ</p>

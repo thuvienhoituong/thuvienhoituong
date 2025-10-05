@@ -7,11 +7,7 @@ function Introduce() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 mb-12 markdown">
         <h1>Liệu pháp hồi tưởng là gì?</h1>
         <div className="flex justify-center items-center">
-          <video
-            width="100%"
-            controls
-            src="/videos/gioi-thieu-lieu-phap-hoi-tuong.mp4"
-          ></video>
+          <video width="100%" controls src="/videos/gioi-thieu-lieu-phap-hoi-tuong.mp4"></video>
         </div>
         <p className="text-3xl my-4 text-center font-semibold text-[#16d9cf]">Dự án thư viện liệu pháp hồi tưởng</p>
         <p className="indent-8">
@@ -25,11 +21,7 @@ function Introduce() {
           thời trẻ, cùng với hướng dẫn để mọi người có thể thực hiện phương pháp hồi tưởng tại nhà hoặc tại các cơ sở
           dành cho người cao tuổi, nhằm giúp tăng cường trí tuệ và sự tích cực cho người thân của mình.
         </p>
-        <img
-          className="max-w-[400px] w-full !important"
-          src="/images/common/BS_Tran_Cong_Thang.webp"
-          alt=""
-        />
+        <img className="max-w-[400px] w-full !important" src="/images/common/BS_Tran_Cong_Thang.webp" alt="" />
         <p className="text-center">TS Trần Công Thắng</p>
         <p className="text-center">Trưởng Bộ môn Thần Kinh - Đại học Y Dược TP. Hồ Chí Minh</p>
         <p className="text-center">Trưởng Đơn vị Trí nhớ và Sa sút trí tuệ - Bệnh viện Đại học Y Dược TP.HCM</p>
