@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--projecttitle-->
+    <title>Nhà Thời Xưa 3D - Thư viện hồi tưởng</title>
+    <!--projecttitle-end-->
+    <!--projectdescription-->
+    <meta name="description" content="Baruuuuurururuurru" />
+    <!--projectdescription-end-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Liệu pháp hồi tưởng là gì?
+      Hồi tưởng, bao gồm việc nhìn vào những đồ vật, video hoài cổ và nói về những kỷ niệm, được cho là có tác dụng kích hoạt não bộ và ổn định cảm xúc, và nếu tiếp tục trong một thời gian dài, có thể giúp ngăn ngừa sự tiến triển của chứng mất trí nhớ và cải thiện chứng trầm cảm. "
+    />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Insert this line above script imports  -->
+    <script>
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+
+    <script src="imagedata.js"></script>
+    <script src="jquery.js"></script>
+    <script src="three.min.js"></script>
+    <script src="panolens.min.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>
+      if (window.module) module = window.module;
+    </script>
+
+    <style>
+
+
+
+      /* SCROLLBAR STYLING */
+      /* width */
+      ::-webkit-scrollbar {
+      	width: 0.25em;
+      	height: 0.25em;
+      }
+      /* Track */
+      ::-webkit-scrollbar-track {
+      	background: #2c3643;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+      	background: #0d9e59;
+      	transition: background .5s;
+      }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+      	background: #00e075;
+      }
+
+
+      html, body {
+      	margin: 0;
+      	width: 100%;
+      	height: 100%;
+      	overflow: hidden;
+      	background-color: #000;
+      	color; black;
+      }
+
+      a:link, a:visited{
+      	color: #bdc3c7;
+      }
+
+      .fullwrapper{
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	right: 0;
+      	bottom: 0;
+      	background-color: black;
+      }
+
+      #container {
+                   width: 100%;
+                   height: 100%;
+               }
+
+      #tmp{
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	right: 0;
+      	bottom: 0;
+      	padding: 3em;
+      	background-color: rgba(0,0,0,.5);
+      	backdrop-filter: blur(5px);
+      	display: none;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div id="container" style="color: black"></div>
+
+    <!--customhtml-->
+    <div class="customhotspot" id="Nhakhach"></div>
+    <div class="customhotspot" id="Benngoai"></div>
+    <div class="customhotspot" id="Chanhdien"></div>
+    <div class="customhotspot" id="Phongtrai"></div>
+    <div class="customhotspot" id="plamviec"></div>
+    <div class="customhotspot" id="Phongnguv1"></div>
+    <div class="customhotspot" id="Phongbep"></div>
+    <div class="customhotspot" id="PHIASAU"></div>
+    <!--customhtml-end-->
+
+    <div id="tmp">
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          overflow-y: auto;
+          box-sizing: border-box;
+          position: relative;
+        "
+        id="tmpcontent"
+      ></div>
+      <div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
+    </div>
+
+    <div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%">
+      <div
+        style="
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          color: white;
+          font-size: 30px;
+          padding: 50px;
+        "
+      >
+        <!--loadingtext-->Loading...<!--loadingtext-end-->
+      </div>
+    </div>
+
+    <script>
+      var container = document.querySelector('#container');
+      /*panolens*/
+
+      var viewer = new PANOLENS.Viewer({
+        container: container,
+        controlBar: false,
+        output: 'console',
+        autoHideInfospot: false,
+      });
+
+      /*panolens-end*/
+
+      viewer.addUpdateCallback(function () {});
+
+      /*panoramas*/
+
+      var Nhakhach = new PANOLENS.ImagePanorama('panoramas/Nhakhach.jpg');
+      Nhakhach.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      Nhakhach.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      Nhakhach.addEventListener('click', function (e) {});
+
+      var infospotNhakhach0 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotNhakhach0.position.set(929.36, -1770.48, 4576.69);
+      Nhakhach.add(infospotNhakhach0);
+
+      infospotNhakhach0.addEventListener('click', function () {
+        ChangePanorama('Chanhdien');
+      });
+
+      var infospotNhakhach1 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotNhakhach1.position.set(2083.51, -2017.87, -4061.79);
+      Nhakhach.add(infospotNhakhach1);
+
+      infospotNhakhach1.addEventListener('click', function () {
+        ChangePanorama('Phongbep');
+      });
+
+      viewer.add(Nhakhach);
+
+      var Benngoai = new PANOLENS.ImagePanorama('panoramas/Benngoai.jpg');
+      Benngoai.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      Benngoai.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      Benngoai.addEventListener('click', function (e) {});
+
+      var infospotBenngoai0 = new PANOLENS.Infospot(512, hotspotIcons[11].data, true);
+      infospotBenngoai0.position.set(4965.63, 390.77, -362.93);
+      Benngoai.add(infospotBenngoai0);
+
+      infospotBenngoai0.addEventListener('click', function () {
+        ChangePanorama('Chanhdien');
+      });
+
+      viewer.add(Benngoai);
+
+      var Chanhdien = new PANOLENS.ImagePanorama('panoramas/Chanhdien.jpg');
+      Chanhdien.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      Chanhdien.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      Chanhdien.addEventListener('click', function (e) {});
+
+      var infospotChanhdien0 = new PANOLENS.Infospot(512, hotspotIcons[0].data, true);
+      infospotChanhdien0.position.set(-4885.66, 754.33, 699.66);
+      Chanhdien.add(infospotChanhdien0);
+
+      infospotChanhdien0.addEventListener('click', function () {
+        ChangePanorama('Benngoai');
+      });
+
+      var infospotChanhdien1 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotChanhdien1.position.set(4935.32, 88.8, -735.8);
+      Chanhdien.add(infospotChanhdien1);
+
+      infospotChanhdien1.addEventListener('click', function () {
+        ChangePanorama('Nhakhach');
+      });
+
+      var infospotChanhdien2 = new PANOLENS.Infospot(512, hotspotIcons[4].data, true);
+      infospotChanhdien2.position.set(-1798.87, 366.26, -4642.47);
+      Chanhdien.add(infospotChanhdien2);
+
+      infospotChanhdien2.addEventListener('click', function () {
+        ChangePanorama('Phongnguv1');
+      });
+
+      var infospotChanhdien3 = new PANOLENS.Infospot(512, hotspotIcons[3].data, true);
+      infospotChanhdien3.position.set(-1254.55, 423.99, 4813.32);
+      Chanhdien.add(infospotChanhdien3);
+
+      infospotChanhdien3.addEventListener('click', function () {
+        ChangePanorama('Phongtrai');
+      });
+
+      var infospotChanhdien4 = new PANOLENS.Infospot(512, hotspotIcons[4].data, true);
+      infospotChanhdien4.position.set(2189.44, 660.08, 4435.57);
+      Chanhdien.add(infospotChanhdien4);
+
+      infospotChanhdien4.addEventListener('click', function () {
+        ChangePanorama('plamviec');
+      });
+
+      viewer.add(Chanhdien);
+
+      var Phongtrai = new PANOLENS.ImagePanorama('panoramas/Phongtrai.jpg');
+      Phongtrai.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      Phongtrai.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      Phongtrai.addEventListener('click', function (e) {});
+
+      var infospotPhongtrai0 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotPhongtrai0.position.set(3781.49, -1371.51, -2953.79);
+      Phongtrai.add(infospotPhongtrai0);
+
+      infospotPhongtrai0.addEventListener('click', function () {
+        ChangePanorama('Chanhdien');
+
+        ChangePanorama('Chanhdien');
+      });
+
+      viewer.add(Phongtrai);
+
+      var plamviec = new PANOLENS.ImagePanorama('panoramas/plamviec.jpg');
+      plamviec.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      plamviec.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      plamviec.addEventListener('click', function (e) {});
+
+      var infospotplamviec0 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotplamviec0.position.set(-661.38, -966.95, -4851.23);
+      plamviec.add(infospotplamviec0);
+
+      infospotplamviec0.addEventListener('click', function () {
+        ChangePanorama('Chanhdien');
+      });
+
+      viewer.add(plamviec);
+
+      var Phongnguv1 = new PANOLENS.ImagePanorama('panoramas/Phongnguv1.jpg');
+      Phongnguv1.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      Phongnguv1.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      Phongnguv1.addEventListener('click', function (e) {});
+
+      var infospotPhongnguv10 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotPhongnguv10.position.set(4921.18, -704.18, 505.51);
+      Phongnguv1.add(infospotPhongnguv10);
+
+      infospotPhongnguv10.addEventListener('click', function () {
+        ChangePanorama('Chanhdien');
+      });
+
+      viewer.add(Phongnguv1);
+
+      var Phongbep = new PANOLENS.ImagePanorama('panoramas/Phongbep.jpg');
+      Phongbep.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      Phongbep.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      Phongbep.addEventListener('click', function (e) {});
+
+      var infospotPhongbep0 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+      infospotPhongbep0.position.set(-2965.54, 1250.09, -3815.98);
+      Phongbep.add(infospotPhongbep0);
+
+      infospotPhongbep0.addEventListener('click', function () {
+        ChangePanorama('Chanhdien');
+
+        ChangePanorama('Nhakhach');
+      });
+
+      viewer.add(Phongbep);
+
+      var PHIASAU = new PANOLENS.ImagePanorama('panoramas/PHIASAU.jpg');
+      PHIASAU.addEventListener('progress', function (e) {
+        $('#loading').show();
+      });
+      PHIASAU.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+      });
+      PHIASAU.addEventListener('click', function (e) {});
+
+      viewer.add(PHIASAU);
+
+      $(document).ready(function () {
+        ChangePanorama('Chanhdien');
+      });
+
+      /*panoramas-end*/
+
+      function hideTemp() {
+        $('#tmp').fadeOut();
+        setTimeout(function () {
+          $('#tmpcontent').html('');
+        }, 1000);
+      }
+
+      function showMedia(type, content) {
+        switch (type) {
+          case 1:
+            //Image
+            $('#tmpcontent').html("<img src='" + content + "' style='width: 100%;'>");
+            $('#tmp').fadeIn();
+            break;
+          case 2:
+            //Video
+            $('#tmpcontent').html(
+              "<video id='webvideo' controls autoplay style='width: 100%; height: 100%;'><source src='" +
+                content +
+                "' type='video/mp4'> Your browser does not support the video tag. </video>",
+            );
+            $('#tmp').fadeIn();
+            break;
+          case 3:
+            //Audio
+            $('#tmpcontent').html(
+              "<audio controls style='width: 100%;'><source src='" +
+                content +
+                "' type='audio/ogg'>Your browser does not support the audio tag.</audio>",
+            );
+            $('#tmp').fadeIn();
+            break;
+          case 4:
+            //PDF
+            $('#tmpcontent').html(
+              "<iframe src='pdfjs/web/viewer.html?file=../../" +
+                content +
+                "' style='width: 100%; height: 99%;'></iframe>",
+            );
+            $('#tmp').fadeIn();
+            break;
+        }
+      }
+
+      //Update Callback
+      viewer.addUpdateCallback(function () {
+        /*viewerupdatecallback*/
+        if (viewer.panorama == Nhakhach) {
+        }
+
+        if (viewer.panorama == Benngoai) {
+        }
+
+        if (viewer.panorama == Chanhdien) {
+        }
+
+        if (viewer.panorama == Phongtrai) {
+        }
+
+        if (viewer.panorama == plamviec) {
+        }
+
+        if (viewer.panorama == Phongnguv1) {
+        }
+
+        if (viewer.panorama == Phongbep) {
+        }
+
+        if (viewer.panorama == PHIASAU) {
+        }
+        /*viewerupdatecallback-end*/
+      });
+
+      var hotspotsvisible = true;
+      function ShowMyInfospot(hs, elid) {
+        var thehs = toScreenPosition(hs);
+        if (thehs.z < 1) {
+          $('#' + elid).css({
+            top: thehs.y - $('#' + elid).height() / 2 + 'px',
+            left: thehs.x - $('#' + elid).width() / 2 + 'px',
+          });
+          if (hotspotsvisible) $('#' + elid).show();
+        } else {
+          $('#' + elid).hide();
+        }
+      }
+
+      function toScreenPosition(obj) {
+        var vector = new THREE.Vector3();
+        var widthHalf = 0.5 * innerWidth;
+        var heightHalf = 0.5 * innerHeight;
+
+        //obj.updateMatrixWorld();
+        vector.setFromMatrixPosition(obj.matrixWorld);
+
+        vector.project(viewer.camera);
+
+        vector.x = vector.x * widthHalf + widthHalf;
+        vector.y = -(vector.y * heightHalf) + heightHalf;
+
+        return {
+          x: vector.x,
+          y: vector.y,
+          z: vector.z,
+        };
+      }
+
+      var currentPanorama;
+      function ChangePanorama(panorama) {
+        currentPanorama = panorama;
+        HideInfospots();
+        $('#loading').fadeIn();
+        //$(".customhotspot").fadeOut();
+        setTimeout(function () {
+          viewer.setPanorama(window[panorama]);
+        }, 100);
+        setTimeout(function () {
+          $('#' + panorama).fadeIn();
+          $('#loading').fadeOut();
+        }, 1000);
+      }
+
+      function HideInfospots() {
+        $('.customhotspot').fadeOut();
+      }
+
+      /*customjs*/ /*customjs-end*/
+    </script>
+  </body>
+</html>
