@@ -26,7 +26,7 @@ Hãy lắng nghe cẩn thận những từ ngữ mà đối phương tự nhiên
 
 Nếu người tham gia không nói chuyện một cách tự nhiên, hãy thử bắt chuyện bằng cách gợi ý trực tiếp. Ví dụ, người hỗ trợ có thể hỏi: "Ông /bà có từng làm việc đó không?" hoặc "Ông/bà đã nghe thấy âm thanh này, phải không?". Ngoài ra, hãy đặt câu hỏi như "Ông/bà đã xem khi nào, với ai và  ở đâu?" để khơi gợi cuộc trò chuyện.
 
-![alt](https://cdn.thuvienhoituong.com/images/common/UseAtHome_1.jpg)
+![alt](/images/common/Chanh-dien.jpg/images/common/UseAtHome_1.jpg)
 
 ### Bước 3: Thảo luận dựa trên các câu hỏi sau khi xem
 
@@ -45,7 +45,7 @@ Hãy thử trả lời những câu hỏi sau:
 
 ※ Chẳng phải sẽ thú vị hơn nếu như ông/bà viết ra những điều bản thân yêu thích, ghi nhớ, hay những nội dung bản thân chợt nhớ đến. 
 
-![alt](https://cdn.thuvienhoituong.com/images/common/UseAtHome_2.jpg)
+![alt](/images/common/Chanh-dien.jpg/images/common/UseAtHome_2.jpg)
 `;
 
   return (

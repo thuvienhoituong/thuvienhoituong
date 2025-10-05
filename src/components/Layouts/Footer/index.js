@@ -52,7 +52,7 @@ function Footer() {
               <p className={`mb-4`} dangerouslySetInnerHTML={{ __html: footerDesc[2].text }}></p>
             </p>
             <p className="text-lg leading-8 col-span-1 lg:col-span-2 text-justify text-white">
-              <img src="https://cdn.thuvienhoituong.com/images/common/hoatdong.jpg" alt="" />
+              <img src="/images/common/hoatdong.jpg" alt="" />
             </p>
           </div>
           <div className="grid mt-6 grid-cols-1 gap-8">

@@ -5,7 +5,7 @@ import DefaultLayout from '~/components/Layouts/DefaultLayout';
 function UseAtHospital() {
   const content = `# Cách sử dụng phương pháp hồi tưởng ở viện dưỡng lão
 
-![alt](https://cdn.thuvienhoituong.com/images/common/hoatdong.jpg)
+![alt](/images/common/hoatdong.jpg)
 
 Tập hợp 4 đến 6 người và dự kiến mất khoảng 1 giờ cho hoạt động này. Tùy thuộc vào độ tuổi của các thành viên tham gia, hãy lựa chọn các tin tức và chương trình đã được phát sóng trong thời thơ ấu hoặc tuổi trẻ của họ để xem. Sau đó, trong quá trình xem hoặc sau khi xem xong, hãy thảo luận về các chương trình gợi nhớ hoặc chương trình yêu thích, chia sẻ kỷ niệm và cảm nhận từ thời điểm chương trình được phát sóng. Sau khi kết thúc buổi hồi tưởng, hãy ghi chép lại những kỷ niệm mà mỗi người chia sẻ, điều đó có thể hữu ích trong cuộc trò chuyện hàng ngày.
 
@@ -22,7 +22,7 @@ Giới thiệu các chương trình hoặc hình ảnh cũ mà nhóm sẽ xem v�
 
 ### Bước 2: Hướng dẫn lựa chọn hình ảnh hoặc video để xem
 
-![alt](https://cdn.thuvienhoituong.com/images/common/hoatdong2.jpg)
+![alt](/images/common/hoatdong2.jpg)
 
 Dựa trên độ tuổi và các yếu tố khác của người tham gia, một chương trình mà đa số người tham gia có thể hứng thú là các chương trình truyền hình kinh điển từ được phát sóng từ thời niên thiếu của họ. Những bộ phim và những chương trình này thường là một phần không thể thiếu trong ký ức của nhiều người, và chúng có thể gợi lại nhiều cảm xúc và kỷ niệm từ thời thời trẻ của họ.
 
@@ -30,7 +30,7 @@ Dựa trên độ tuổi và các yếu tố khác của người tham gia, mộ
 
 ### Bước 3: Xem và nhớ lại
 
-![alt](https://cdn.thuvienhoituong.com/images/common/hoatdong3.jpg)
+![alt](/images/common/hoatdong3.jpg)
 
 Phát các video hoặc hình ảnh đã được nhóm chọn trước đó. Trong quá trình này, khuyến khích mọi người tập trung và chú ý đến những chi tiết như trang phục, kiểu tóc của nhân vật, phương tiện di chuyển, kiến trúc, đồ dùng, cũng như cách sống và tình hình xã hội tại thời điểm đó.
 
@@ -49,7 +49,7 @@ Lưu ý: Đảm bảo rằng thời gian xem không quá lâu, tùy thuộc vào
 
 ### Bước 4: Thảo luận và hồi tưởng
 
-![alt](https://cdn.thuvienhoituong.com/images/common/hoatdong4.jpg)
+![alt](/images/common/hoatdong4.jpg)
 
 Sau khi mọi người đã xem xong, hãy mở cuộc trò chuyện và khuyến khích mọi người chia sẻ kỷ niệm và cảm nhận của mình về chương trình hoặc hình ảnh đó.
 
@@ -85,7 +85,7 @@ Cảm ơn mọi người đã tham gia và chia sẻ kỷ niệm của mình tro
         </Markdown>
         <img
           className="max-w-[400px] w-full m-auto"
-          src="https://cdn.thuvienhoituong.com/images/common/lu_quang_minh.jpg"
+          src="/images/common/lu_quang_minh.jpg"
           alt=""
         />
         <div className="text-center my-4">

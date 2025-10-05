@@ -10,7 +10,7 @@ function Introduce() {
           <video
             width="100%"
             controls
-            src="https://cdn.thuvienhoituong.com/videos/gioi-thieu-lieu-phap-hoi-tuong.mp4"
+            src="/videos/gioi-thieu-lieu-phap-hoi-tuong.mp4"
           ></video>
         </div>
         <p className="text-3xl my-4 text-center font-semibold text-[#16d9cf]">Dự án thư viện liệu pháp hồi tưởng</p>
@@ -27,7 +27,7 @@ function Introduce() {
         </p>
         <img
           className="max-w-[400px] w-full !important"
-          src="https://cdn.thuvienhoituong.com/images/common/BS_Tran_Cong_Thang.webp"
+          src="/images/common/BS_Tran_Cong_Thang.webp"
           alt=""
         />
         <p className="text-center">TS Trần Công Thắng</p>

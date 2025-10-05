@@ -17,7 +17,7 @@ function Virtualtour() {
         <div className="group relative">
           <div className="relative h-80 w-full overflow-hidden group-hover:opacity-90 duration-200">
             <img
-              src="https://cdn.thuvienhoituong.com/images/common/Chanh-dien.jpg"
+              src="/images/common/Chanh-dien.jpg"
               alt=""
               className="h-full w-full object-cover object-center"
             />
