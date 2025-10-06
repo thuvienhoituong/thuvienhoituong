@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
+import { Analytics } from '@vercel/analytics/react';
 
 import { publicRoutes, privateRoutes } from '~/routes';
 import Context from './Context';
@@ -79,6 +80,7 @@ function App() {
           })}
         </Routes>
       </Router>
+      <Analytics />
     </Context.Provider>
   );
 }
